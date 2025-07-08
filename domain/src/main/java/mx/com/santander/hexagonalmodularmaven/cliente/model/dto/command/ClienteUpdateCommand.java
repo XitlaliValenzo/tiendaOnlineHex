@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ClienteEditCommand {
+public class ClienteUpdateCommand {
     private String nombre;
     private String apellido;
     private String email;

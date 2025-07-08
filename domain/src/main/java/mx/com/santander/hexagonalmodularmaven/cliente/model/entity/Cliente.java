@@ -1,7 +1,12 @@
 package mx.com.santander.hexagonalmodularmaven.cliente.model.entity;
 
-import mx.com.santander.hexagonalmodularmaven.cliente.model.dto.command.ClienteCreateCommand;
+import java.util.List;
 
+import lombok.NoArgsConstructor;
+import mx.com.santander.hexagonalmodularmaven.cliente.model.dto.command.ClienteCreateCommand;
+import mx.com.santander.hexagonalmodularmaven.user.model.entity.User;
+
+@NoArgsConstructor
 public class Cliente {
 
     private ClienteId id;
@@ -52,5 +57,4 @@ public class Cliente {
     public String getDireccion() {
         return direccion.getDireccion();
     }
-
 }
