@@ -36,7 +36,7 @@ feign:
 server:
     port: 8080
     servlet:
-        context-path: /example
+        context-path: /api
         session:
             timeout: 21600s
 
