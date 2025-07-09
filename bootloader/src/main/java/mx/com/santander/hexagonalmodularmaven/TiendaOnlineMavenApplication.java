@@ -10,10 +10,10 @@ import org.springframework.kafka.annotation.EnableKafka;
 @EnableMongoRepositories
 @EnableFeignClients
 @EnableKafka
-public class ModularHexagonalArchitectureMavenApplication {
+public class TiendaOnlineMavenApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ModularHexagonalArchitectureMavenApplication.class, args);
+		SpringApplication.run(TiendaOnlineMavenApplication.class, args);
 	}
 
 }
