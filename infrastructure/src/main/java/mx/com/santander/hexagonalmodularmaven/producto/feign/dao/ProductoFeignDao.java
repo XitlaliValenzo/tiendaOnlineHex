@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import lombok.RequiredArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.producto.adapter.entity.ProductoEntity;
 import mx.com.santander.hexagonalmodularmaven.producto.adapter.mapper.ProductoDBMapper;
-import mx.com.santander.hexagonalmodularmaven.producto.feign.repository.ProductoFeignAdapter;
+import mx.com.santander.hexagonalmodularmaven.producto.feign.ProductoFeignAdapter;
 import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDao;
 

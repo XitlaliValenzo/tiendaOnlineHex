@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import lombok.RequiredArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.cliente.adapter.entity.ClienteEntity;
 import mx.com.santander.hexagonalmodularmaven.cliente.adapter.mapper.ClienteDBMapper;
-import mx.com.santander.hexagonalmodularmaven.cliente.feign.repository.ClienteFeignAdapter;
+import mx.com.santander.hexagonalmodularmaven.cliente.feign.ClienteFeignAdapter;
 import mx.com.santander.hexagonalmodularmaven.cliente.model.entity.Cliente;
 import mx.com.santander.hexagonalmodularmaven.cliente.port.dao.ClienteDao;
 

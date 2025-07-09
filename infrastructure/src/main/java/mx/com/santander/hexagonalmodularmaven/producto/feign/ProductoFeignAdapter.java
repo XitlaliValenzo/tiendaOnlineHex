@@ -1,4 +1,4 @@
-package mx.com.santander.hexagonalmodularmaven.producto.feign.repository;
+package mx.com.santander.hexagonalmodularmaven.producto.feign;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import mx.com.santander.hexagonalmodularmaven.producto.adapter.entity.ProductoEntity;
 
-@FeignClient(name = "${feign.name}", url = "${feign.base-url}")
+@FeignClient(name = "jplaceholder-productos", url = "https://jsonplaceholder.typicode.com")
 public interface ProductoFeignAdapter {
 
     @RequestMapping(method = RequestMethod.GET, value = "/productos")
