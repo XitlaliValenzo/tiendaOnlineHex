@@ -14,11 +14,11 @@ public class ProductoUpdateService {
     private final ProductoRepository productoRepository;
 
     public Producto execute(ProductoUpdateCommand productoUpdateCommand, Long id){
-        Producto currentProducto = productoDao.getById(id);
-        if(currentProducto == null){
+        Producto productoToUpdate = productoDao.getById(id);
+        if(productoToUpdate == null){
             throw new ProductoException("El id a eliminar"+ id + " no existe");
         } 
-        Producto productoToUpdate = new Producto(currentProducto.getId(), productoUpdateCommand.getNombre(), productoUpdateCommand.getPrecio(), productoUpdateCommand.getStock());
+        productoToUpdate.requestToUpdate(productoUpdateCommand);
         return productoRepository.update(productoToUpdate);   
     }
 

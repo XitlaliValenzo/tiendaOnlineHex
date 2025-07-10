@@ -31,12 +31,12 @@ public class ProductoCommandController {
     }
 
     @PutMapping("/{id}")
-    public ProductoDto update(@PathVariable Long id, @RequestBody ProductoUpdateCommand productoUpdateCommand) {
+    public ProductoDto update(@PathVariable("id") long id, @RequestBody ProductoUpdateCommand productoUpdateCommand) {
         return productoUpdateHandler.execute(productoUpdateCommand, id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") long id) {
         productoDeleteHandler.execute(id);
     }
 

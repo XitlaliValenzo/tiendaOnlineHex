@@ -31,12 +31,12 @@ public class ClienteCommandController {
     }
 
     @PutMapping("/{id}")
-    public ClienteDto update(@PathVariable Long id, @RequestBody ClienteUpdateCommand clienteUpdateCommand) {
+    public ClienteDto update(@PathVariable("id") long id, @RequestBody ClienteUpdateCommand clienteUpdateCommand) {
         return clienteUpdateHandler.execute(clienteUpdateCommand, id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") long id) {
         clienteDeleteHandler.execute(id);
     }
 }

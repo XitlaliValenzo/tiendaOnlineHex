@@ -26,7 +26,7 @@ public class ProductoDBMapper {
         if (domain == null) {
             return null;
         }
-        return new ProductoEntity(domain.getId(), domain.getNombre(), domain.getPrecio(), domain.getStock());
+        return new ProductoEntity(null, domain.getNombre(), domain.getPrecio(), domain.getStock());
     }
 
 }

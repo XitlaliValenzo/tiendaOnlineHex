@@ -12,7 +12,7 @@ import mx.com.santander.hexagonalmodularmaven.producto.port.repository.ProductoR
 @Repository
 @Transactional
 @RequiredArgsConstructor
-public class ProductoPostgressRepository implements ProductoRepository {
+public class ProductoJpaRepository implements ProductoRepository {
 
     private final ProductoSpringJpaAdapterRepository productoSpringJpaAdapterRepository;
     private final ProductoDBMapper productoDbMapper;

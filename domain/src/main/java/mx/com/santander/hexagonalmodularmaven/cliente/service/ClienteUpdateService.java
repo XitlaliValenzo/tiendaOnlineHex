@@ -14,11 +14,11 @@ public class ClienteUpdateService {
     private final ClienteRepository clienteRepository;
 
     public Cliente execute(ClienteUpdateCommand clienteUpdateCommand, Long id){
-        Cliente currentCliente = clienteDao.getById(id);
-        if (currentCliente == null){
+        Cliente clienteToUpdate = clienteDao.getById(id);
+        if (clienteToUpdate == null){
             throw new ClienteException("El id a actualizar"+ id + " no existe");
         }
-        Cliente clienteToUpdate = new Cliente(currentCliente.getId(), clienteUpdateCommand.getNombre(), clienteUpdateCommand.getApellido(), clienteUpdateCommand.getEmail(), clienteUpdateCommand.getTelefono(), clienteUpdateCommand.getDireccion());
+        clienteToUpdate.requestToUpdate(clienteUpdateCommand);
         return clienteRepository.update(clienteToUpdate);
     }
 

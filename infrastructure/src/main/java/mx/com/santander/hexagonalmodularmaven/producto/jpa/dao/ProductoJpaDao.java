@@ -14,7 +14,7 @@ import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDao;
 
 @Repository
 @RequiredArgsConstructor
-public class ProductoPostgressDao implements ProductoDao{
+public class ProductoJpaDao implements ProductoDao{
 
     private final ProductoDBMapper productoDbMapper;
     private final ProductoSpringJpaAdapterRepository productoSpringJpaAdapterRepository;

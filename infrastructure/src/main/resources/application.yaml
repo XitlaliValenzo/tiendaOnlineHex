@@ -1,16 +1,9 @@
 spring:
     datasource:
         username: postgres
-        url: jdbc:postgresql://localhost:5432/user-task
+        url: jdbc:postgresql://localhost:5432/tienda
         password: secret
-    h2:
-        console:
-            enabled: true
-            settings:
-                web-allow-others: true
-                trace: false
-            path: /h2-console
-            allowed-origins: "*"
+    
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         hibernate:
@@ -29,10 +22,7 @@ spring:
         mongodb:
             database: example
             uri: mongodb://root:example@localhost:27017/admin?connectTimeoutMS=10000&authSource=admin
-feign:
-    name: jplaceholder
-    base-url: "https://jsonplaceholder.typicode.com"
-    photo-resource: "/photos"
+
 server:
     port: 8080
     servlet:

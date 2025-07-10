@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import lombok.NoArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.producto.model.dto.command.ProductoCreateCommand;
+import mx.com.santander.hexagonalmodularmaven.producto.model.dto.command.ProductoUpdateCommand;
 
 @NoArgsConstructor
 public class Producto {
@@ -23,6 +24,13 @@ public class Producto {
         this.nombre = new ProductoNombre(productoCreateCommand.getNombre());
         this.precio = new ProductoPrecio(productoCreateCommand.getPrecio());
         this.stock = new ProductoStock(productoCreateCommand.getStock());
+        return this;
+    }
+
+    public Producto requestToUpdate(ProductoUpdateCommand productoUpdateCommand){
+        this.nombre = new ProductoNombre(productoUpdateCommand.getNombre());
+        this.precio = new ProductoPrecio(productoUpdateCommand.getPrecio());
+        this.stock = new ProductoStock(productoUpdateCommand.getStock());
         return this;
     }
 
