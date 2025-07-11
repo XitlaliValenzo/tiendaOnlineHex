@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
+import mx.com.santander.hexagonalmodularmaven.productosCompra.model.dto.ProductosCompraDto;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,8 +17,7 @@ import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 public class CompraDto {
     private Long id;
     private Long clienteId;
-    private List<Producto> productos;
-    private Integer cantidad;
+    private List<ProductosCompraDto> productos;
     private BigDecimal precioTotal;
     private Date fechaCompra;
 

@@ -3,10 +3,12 @@ package mx.com.santander.hexagonalmodularmaven.producto.model.entity;
 import java.math.BigDecimal;
 
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import mx.com.santander.hexagonalmodularmaven.producto.model.dto.command.ProductoCreateCommand;
 import mx.com.santander.hexagonalmodularmaven.producto.model.dto.command.ProductoUpdateCommand;
 
 @NoArgsConstructor
+@Setter
 public class Producto {
     private ProductoId id;
     private ProductoNombre nombre;
