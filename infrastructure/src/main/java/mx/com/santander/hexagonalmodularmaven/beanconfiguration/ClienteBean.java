@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import mx.com.santander.hexagonalmodularmaven.cliente.port.dao.ClienteDao;
+import mx.com.santander.hexagonalmodularmaven.cliente.port.message.ClienteKafkaProducerPort;
 import mx.com.santander.hexagonalmodularmaven.cliente.port.repository.ClienteRepository;
 import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteByIdService;
 import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteCreateService;
@@ -25,8 +26,8 @@ public class ClienteBean {
     }
 
     @Bean
-    public ClienteCreateService clienteCreateService(ClienteRepository clienteRepository) {
-        return new ClienteCreateService(clienteRepository);
+    public ClienteCreateService clienteCreateService(ClienteRepository clienteRepository, ClienteKafkaProducerPort clienteKafkaProducerPort) {
+        return new ClienteCreateService(clienteRepository, clienteKafkaProducerPort);
     }
 
     @Bean
